@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>d0fc2e12-2e46-47a3-948e-dc2305bfe215</Guid>
+    <Name>WOTC_Pharmacist</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>WOTC_Pharmacist</AssemblyName>
+    <RootNamespace>WOTC_Pharmacist</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\LW_Tuple" />
+    <Folder Include="Src\LW_Tuple\Classes" />
+    <Folder Include="Src\XModBase_Interfaces" />
+    <Folder Include="Src\XModBase_Core_2_0_1" />
+    <Folder Include="Src\WOTC_Pharmacist\" />
+    <Folder Include="Src\WOTC_Pharmacist\Classes\" />
+    <Folder Include="Src\XModBase_Core_2_0_1\Classes" />
+    <Folder Include="Src\XModBase_Interfaces\Classes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComClassData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSchematics_StimGun.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSoldierSkills_StimGun.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Pharmacist.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\LW_Tuple\Classes\LWTuple.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2AbilityCharges_BonusStims.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2AbilityTarget_SingleInRange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Ability_StimGuns.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Condition_Stimulate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Condition_UnitAffectedByPhysicalEffect.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2DownloadableContentInfo_WOTC_Pharmacist.uc" />
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Effect_ApplyRecoveryStimHeal.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Effect_IncreasedDosage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Effect_QuickStim.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Item_StimGuns.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\X2Item_StimGunSchematics.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBAbilityTrigger_EventListener.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_AbilityCost.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_AbilityHitResult.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_AbilityName.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_AbilityProperty.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_Concealed.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_CoverType.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_Dead.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_HeightAdvantage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_MatchingWeapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_ReactionFire.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_SourceAbilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBCondition_WeaponName.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffectUtilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_AbilityCostRefund.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_AddAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_AddAbilityCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_AddItemCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_AddUtilityItem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_BonusDamageByDamageType.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_BonusRadius.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_ChangeHitResultForAttacker.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_ConditionalBonus.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_ConditionalStatChange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_DoNotConsumeAllPoints.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_Extended.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_GrantReserveActionPoint.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_PermanentStatChange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_RevealUnit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBEffect_ToHitModifierByRange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBTemplateUtilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBValue.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBValue_Distance.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBValue_UnitValue.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTC_Pharmacist\Classes\XMBValue_Visibility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBAbilityCost_ActionPoints.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBAbilityMultiTarget_Radius.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBAbilityTag.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBAbilityToHitCalc_StandardAim.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBConfig.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBDownloadableContentInfo_XModBase.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Core_2_0_1\Classes\XMBTargetingMethod_Grenade.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Interfaces\Classes\XMBEffectInterface.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\XModBase_Interfaces\Classes\XMBOverrideInterface.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
