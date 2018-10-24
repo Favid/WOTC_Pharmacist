@@ -132,6 +132,9 @@ static function bool AbilityTagExpandHandler(string InString, out string OutStri
 		case 'FOCUSSTIM_AIM_BONUS':
 			OutString = string(class'X2Ability_StimGuns'.default.FOCUSSTIM_AIM_BONUS);
 			return true;
+		case 'SAVIOR_BONUS_HEAL_AMMOUNT':
+			OutString = string(class'X2Effect_LW2WotC_Savior'.default.SAVIOR_BONUS_HEAL_AMMOUNT);
+			return true;
 		default: 
 			return false;
 	}

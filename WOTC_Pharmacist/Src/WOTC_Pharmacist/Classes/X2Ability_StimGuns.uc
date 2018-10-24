@@ -37,8 +37,10 @@ static function array<X2DataTemplate> CreateTemplates()
 	local array<X2DataTemplate> Templates;
 
 	Templates.AddItem(RecoveryStim());
+	Templates.AddItem(RecoveryStimPassive());
 	Templates.AddItem(StabilizeStim());
 	Templates.AddItem(VenomStim());
+	Templates.AddItem(VenomStimPassive());
 	Templates.AddItem(PinsAndNeedles());
 	Templates.AddItem(Neurotoxin());
 	Templates.AddItem(LingeringEffects());
@@ -177,6 +179,30 @@ static function X2AbilityTemplate RecoveryStim()
 	return Template;
 }
 
+static function X2AbilityTemplate RecoveryStimPassive()
+{
+	local X2AbilityTemplate Template;
+
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'SG_RecoveryStim_Passive');
+
+	Template.IconImage = "img:///Pharmacist.Perk_Ph_RecoveryStim";
+	Template.AbilitySourceName = 'eAbilitySource_Perk';
+	Template.eAbilityIconBehaviorHUD = eAbilityIconBehavior_NeverShow;
+	Template.Hostility = eHostility_Neutral;
+	Template.bIsPassive = true;
+
+	Template.AbilityToHitCalc = default.DeadEye;
+	Template.AbilityTargetStyle = default.SelfTarget;
+	Template.AbilityTriggers.AddItem(default.UnitPostBeginPlayTrigger);
+
+	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
+	// Note: no visualization on purpose!
+
+	Template.bCrossClassEligible = false;
+
+	return Template;
+}
+
 static function X2AbilityTemplate StabilizeStim()
 {
 	local X2AbilityTemplate                     Template;
@@ -258,6 +284,8 @@ static function X2AbilityTemplate StabilizeStim()
 	Template.BuildVisualizationFn = TypicalAbility_BuildVisualization;
 
 	Template.bOverrideWeapon = true;
+
+	Template.OverrideAbilities.AddItem('Stabilize');
     
 	Template.ChosenActivationIncreasePerUse = class'X2AbilityTemplateManager'.default.NonAggressiveChosenActivationIncreasePerUse;
 
@@ -357,6 +385,30 @@ static function X2AbilityTemplate VenomStim()
 
 	Template.bFrameEvenWhenUnitIsHidden = true;
 	Template.AbilityConfirmSound = "TacticalUI_ActivateAbility";
+
+	return Template;
+}
+
+static function X2AbilityTemplate VenomStimPassive()
+{
+	local X2AbilityTemplate Template;
+
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'SG_VenomStim_Passive');
+
+	Template.IconImage = "img:///Pharmacist.Perk_Ph_VenomStim";
+	Template.AbilitySourceName = 'eAbilitySource_Perk';
+	Template.eAbilityIconBehaviorHUD = eAbilityIconBehavior_NeverShow;
+	Template.Hostility = eHostility_Neutral;
+	Template.bIsPassive = true;
+
+	Template.AbilityToHitCalc = default.DeadEye;
+	Template.AbilityTargetStyle = default.SelfTarget;
+	Template.AbilityTriggers.AddItem(default.UnitPostBeginPlayTrigger);
+
+	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
+	// Note: no visualization on purpose!
+
+	Template.bCrossClassEligible = false;
 
 	return Template;
 }

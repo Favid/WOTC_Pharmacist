@@ -82,6 +82,9 @@ static function X2DataTemplate CreateTemplate_StimGun_Conventional()
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = true;
 
+	Template.Abilities.AddItem('SG_RecoveryStim');
+	Template.Abilities.AddItem('SG_VenomStim');
+
 	return Template;
 }
 
@@ -132,6 +135,9 @@ static function X2DataTemplate CreateTemplate_StimGun_Magnetic()
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = true;
 
+	Template.Abilities.AddItem('SG_RecoveryStim');
+	Template.Abilities.AddItem('SG_VenomStim');
+
 	return Template;
 }
 
@@ -181,6 +187,9 @@ static function X2DataTemplate CreateTemplate_StimGun_Beam()
 	Template.StartingItem = false;
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = true;
+
+	Template.Abilities.AddItem('SG_RecoveryStim');
+	Template.Abilities.AddItem('SG_VenomStim');
 
 	return Template;
 }
