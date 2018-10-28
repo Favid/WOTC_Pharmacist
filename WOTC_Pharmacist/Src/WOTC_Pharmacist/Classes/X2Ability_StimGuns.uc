@@ -285,7 +285,7 @@ static function X2AbilityTemplate StabilizeStim()
 
 	Template.bOverrideWeapon = true;
 
-	Template.OverrideAbilities.AddItem('Stabilize');
+	Template.OverrideAbilities.AddItem('MedikitStabilize');
     
 	Template.ChosenActivationIncreasePerUse = class'X2AbilityTemplateManager'.default.NonAggressiveChosenActivationIncreasePerUse;
 

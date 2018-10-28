@@ -32,6 +32,9 @@
     <Content Include="Config\XComGameData_WeaponData.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComGameData_XpData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComSchematics_StimGun.ini">
       <SubType>Content</SubType>
     </Content>
